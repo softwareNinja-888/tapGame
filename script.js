@@ -3,6 +3,7 @@
 
 
 function Game(){
+    let sum = 100;
 
     const angel = document.querySelector(".angel")
     const angelScore = document.querySelector(".Anscore")
@@ -11,11 +12,14 @@ function Game(){
     const timer = ()=>{}
 
     const counter = ()=>{
+
         angel.addEventListener("click",()=>{
-            angelScore.innerHTML = Number(angelScore.innerHTML) + 1150
+            angelScore.innerHTML = Number(angelScore.innerHTML) + 200
+            sum++
+            angel.style.width  = sum + "px";
         })
     }
-    // counter();
+    counter();
 
     const displayWinner = ()=>{}
 }
